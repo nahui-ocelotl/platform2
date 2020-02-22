@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>:: ocelotl | chipahuac</title>
+		<title>:: ocelotl | labyrinth</title>
   
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="style.css" >
@@ -19,7 +19,17 @@
 				 });
 			 });
 		</script>
-		
+		<script>
+		$(document).ready(function(){
+  			$(document).keydown(function(){
+    			var x = event.key;
+    			document.getElementById("tecla").innerHTML = x;
+  			});
+  			$(document).keyup(function(){
+    			document.getElementById("tecla").innerHTML = "0";
+  			});
+		});
+		</script>
 		<style>
 
 		body {
@@ -56,10 +66,13 @@
 	 </head>
 	 <body ondragstart="return false;" ondrop="return false;" onselectstart="return false;">
 		
-		<div class="CanvasDiv">
+	<div id="tecla"></div>
+
+	<div class="CanvasDiv">
                     
-	    <div id="RendererMain"></div>
-		</div>
+	<div id="RendererMain"></div>
+	
+	</div>
              
          <div class="container"></div>    
 
